@@ -1,12 +1,14 @@
 import React from "react";
 import { CiBookmark, CiShare2 } from "react-icons/ci";
 import { FaEye, FaStar } from "react-icons/fa";
+import { Link } from "react-router";
 
 const NewsCard = ({ news }) => {
-  const { author, title, thumbnail_url, details, rating, total_view } = news;
+  const { id, author, title, thumbnail_url, details, rating, total_view } =
+    news;
 
-  const publisharDate = new Date(author.published_date).toLocaleDateString()
-//   console.log(news);
+  const publisharDate = new Date(author.published_date).toLocaleDateString();
+  //   console.log(news);
   return (
     <div className="shadow my-10 rounded-2xl">
       <header className="flex justify-between items-center p-3 bg-base-300 rounded-t-xl ">
@@ -33,9 +35,12 @@ const NewsCard = ({ news }) => {
           {details.length > 200 ? (
             <>
               {details.slice(0, 200)}....{" "}
-              <button className=" text-amber-500 cursor-pointer ">
+              <Link
+                to={`/news-details/${id}`}
+                className=" text-amber-500 cursor-pointer "
+              >
                 Read More
-              </button>
+              </Link>
             </>
           ) : (
             <>{details}</>
