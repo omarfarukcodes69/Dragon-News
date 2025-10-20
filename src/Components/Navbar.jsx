@@ -10,11 +10,11 @@ const Navbar = () => {
   const handleLogOut = () => {
     logout()
       .then((result) => {
-        console.log(result);
+        // console.log(result);
         toast("Log Out Successfully");
       })
       .catch((error) => {
-        console.log(error.massage);
+        // console.log(error.massage);
         toast(error.massage);
       });
     // console.log("Log Out Successfully");

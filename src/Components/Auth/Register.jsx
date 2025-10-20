@@ -28,16 +28,16 @@ const Register = () => {
           })
           .catch((error) => {
             toast(error.message);
-            console.log(error.message);
+            // console.log(error.message);
           });
         toast("Regiter Successfully");
       })
       .catch((error) => {
-        console.log(error.message);
-        // toast(error.message);
+        // console.log(error.message);
+        toast(error.message);
       });
 
-    console.log("Resgiter Btn Clicked", name, photo, email, password);
+    // console.log("Resgiter Btn Clicked", name, photo, email, password);
   };
   return (
     <div className="hero bg-base-200 min-h-screen">

@@ -5,7 +5,7 @@ import PersentageLoading from "../Components/Loaders/PersentageLoading";
 
 const PrivetRoutes = ({ children }) => {
   const { user, loading } = use(AuthContext);
-  console.log(user);
+  // console.log(user);
   const location = useLocation();
 
   if (loading) {

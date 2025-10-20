@@ -16,11 +16,11 @@ const LogIn = () => {
       .then((UserContainer) => {
         const user = UserContainer.user;
         nevigate(`${location.state ? location.state : "/"}`);
-        console.log(user);
+        // console.log(user);
         toast("Log In Successfully !!!");
       })
       .catch((error) => {
-        console.log(error.massage);
+        // console.log(error.massage);
         toast(error.code, error.message);
       });
     // console.log("login Btn Cliked", email, password);
@@ -51,7 +51,7 @@ const LogIn = () => {
                 className="input"
                 placeholder="Password"
                 name="password"
-                 required
+                required
               />
               <div>
                 <a className="link link-hover">Forgot password?</a>
