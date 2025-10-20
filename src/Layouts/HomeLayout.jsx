@@ -3,7 +3,7 @@ import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import LatestNews from "../Components/LatestNews";
 import Navbar from "../Components/Navbar";
-import { Outlet, useNavigation } from "react-router";
+import { Outlet, useLoaderData, useNavigation } from "react-router";
 import LeftSide from "../Components/HomeLayout/LeftSide/LeftSide";
 import RightSide from "../Components/HomeLayout/RightSide/RightSide";
 import CatagoryPage from "../Pages/CatagoryPage";
@@ -23,13 +23,13 @@ const HomeLayout = () => {
         </nav>
       </header>
       <main className="grid grid-cols-12 gap-5 my-15">
-        <aside className=" col-span-3">
+        <aside className=" col-span-3 h-fit sticky top-0">
           <LeftSide />
         </aside>
         <section className="main col-span-6">
           {state ? <Outlet></Outlet> : <PersentageLoading />}
         </section>
-        <aside className=" col-span-3">
+        <aside className=" col-span-3 h-fit sticky top-0">
           <RightSide />
         </aside>
       </main>
